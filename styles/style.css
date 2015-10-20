@@ -65,8 +65,8 @@ section canvas { width: 960px; height: 580px; }
 #gamestats .score { position: absolute; top: 0; right: 0; }
 #gamestats .score p { text-align: right; position: absolute; top: 5px; line-height: 50px; right: 5px; white-space: nowrap; }
 
-#gamestats .bombs { background: url('../meida/images/bomb.png'); right: 5px; }
-#gamestats .lives { background: url('../media/images/heart.png'); left: 5px; }
+#gamestats .bombs { background: url('../media/images/bomb.png'); right: 5px; }
+#gamestats .lives { background: url('../media/images/heart40.png') no-repeat; left: 5px; }
 
 #gamestats .bombs,
 #gamestats .lives { position: absolute; top: 65px; width: 150px; height: 50px; background-size: contain; }

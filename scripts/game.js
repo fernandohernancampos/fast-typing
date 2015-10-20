@@ -30,6 +30,7 @@ function initGame(gameType, gameTime, languaje){
 	getWord();
 
 	//carga de eventos TODO: Mover a otro lugar
+	$( "#insertedWord" ).focus();
 	$( "#insertedWord" ).on( "keypress", function(event) {
       if(event.which == 13) {
       	insertedWord = $("#insertedWord").val();
@@ -42,10 +43,14 @@ function initGame(gameType, gameTime, languaje){
 	//temporizador
 	$('div#clock').countdown(new Date().getTime() + gameTime)
     .on('update.countdown', function(event){
-    	timeLapse = (event.offset.seconds - (gameTime / 1000)) / (gameTime / 1000);
-    	$('div#timeLapse').css("width", (timeLapse / (gameTime / 1000)) + 100);
+    	timeInSec = (gameTime / 1000);
+    	timeLapse = (timeInSec - event.offset.seconds) / timeInSec;
+    	$('div#timeLapse').css("width", (timeLapse * 100) + "%");
+    	//$('div#timeLapse').attr("aria-valuenow", (timeLapse * 100));
     })
-    .on('finish.countdown', endGame("TIMEOUT"));
+    .on('finish.countdown', function(){
+    	endGame("TIMEOUT");	
+    });
 
 
 };

@@ -4,21 +4,41 @@
   <meta charset="utf-8">
   <title>Google Phone Gallery</title>
   <!-- Stylesheet definitions -->
+  <link href="styles/reset.css" rel="stylesheet" type="text/css">
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="bower_components/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">   
   
 
-  <!-- Javascript definition -->
+  <!-- Javascript vendor definition -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular/angular-route.min.js"></script>
-  <script src="script/ft_app.js"></script>
-  <script src="script/ft_controllers_module.js"></script>
+  <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+  <script src="bower_components/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- application scripts -->
+  <script src="scripts/ft-app.js"></script>
+  <script src="scripts/ft-controllers-module.js"></script>
 </head>
 <body>
+
+  <header>
+    <div class="container">
+      <img class="logo" src="media/images/logo.png" />
+      <button class="image share"></button>
+    </div>
+  </header>
 
   <div class="view-container">
     <!-- angular view container -->
     <div ng-view class="view-frame"></div>
   </div>
+
+  <footer>
+    <div class="container">
+      <p><a href="https://www.facebook.com/appcenter/friendsmashsample">View Friend Smash! on App Center</a></p>
+    </div>
+  </footer>
 
 </body>
 </html>
