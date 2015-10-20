@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fast Typing</title>
+  <!-- Stylesheet definitions -->
+  <link href="styles/reset.css" rel="stylesheet" type="text/css">
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="bower_components/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">   
+  
+
+  <!-- Javascript vendor definition -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular/angular-route.min.js"></script>
+  <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+  <script src="bower_components/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- application scripts -->
+
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <img class="logo" src="media/images/logo.png" />
+        <button class="image share"></button>
+      </div>
+  </nav>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="welcome">
+      <h1>Fernando Campos</h1>
+      <img class="profile" src="media/images/profile.png" />
+      <ul class="stats">
+        <li><img src="media/images/scores64.png" alt="Coins" width="40" /> <span class="me coins">...</span></li>
+      </ul>
+    </div>
+    <div id="menu">
+      <button class="image play" ng-click="goToTimeTrialGame()"></button>
+      <button class="image leaderboard"></button>
+    </div>
+    </div>
+    <div class="col-md-6">
+      <div class="friends">
+      <div class="title">
+        <h1>Leaderboard</h1>
+      </div>
+      <div>
+        <ul class="scrollable_list leaderboard">
+          <li class="template">
+              <span>
+                <img src="media/images/profile.png" class="profile small" />
+              </span>
+              <span>
+                  <p>Ali</p>
+                  <p>Score 99</p>
+                </ul>
+              </span>
+          </li>
+        </ul>
+      </div>
+    </div>  
+    </div>
+  </div>
+</div>
+<footer class="footer">
+    <div class="container">
+      <p class="text-muted">Place sticky footer content here.</p>
+    </div>
+</footer>
+
+</body>
+</html>
