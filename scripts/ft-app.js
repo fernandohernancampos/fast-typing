@@ -30,8 +30,7 @@ fastTypingApp.config(['$routeProvider',
                       gameTime: 2000,
                       lives: 3,
                       score: 0,
-                      passAvailable: 2,
-                      passUsed:2,
+                      escapes:2,
                       status: "WAITING",
                       endStatus: null
                   },
@@ -45,3 +44,33 @@ fastTypingApp.config(['$routeProvider',
         redirectTo: '/'
       });
   }]);
+
+
+//** Directives **//
+fastTypingApp.directive('ngEnter', function() {
+        return function(scope, element, attrs) {
+            element.bind("keydown keypress", function(event) {
+                if(event.which === 13) {
+                    scope.$apply(function(){
+                        scope.$eval(attrs.ngEnter, {'event': event});
+                    });
+
+                    event.preventDefault();
+                }
+            });
+        };
+    });
+
+fastTypingApp.directive('ngEscape', function() {
+        return function(scope, element, attrs) {
+            element.bind("keydown keypress", function(event) {
+                if(event.which === 27) {
+                    scope.$apply(function(){
+                        scope.$eval(attrs.ngEscape, {'event': event});
+                    });
+
+                    event.preventDefault();
+                }
+            });
+        };
+    });

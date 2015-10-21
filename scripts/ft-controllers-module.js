@@ -44,7 +44,10 @@ fastTypingControllers.controller('FastTypingGameTimeTrialController', [
 		    });
 	
     };
-    
+
+    $scope.getNumber = function(num) {
+	    return new Array(num);
+	}    
 
     //** Actions **//
     $scope.getWord = function getWord() {
@@ -90,8 +93,8 @@ fastTypingControllers.controller('FastTypingGameTimeTrialController', [
     };
 
     $scope.jumpWord = function jumpWord(){
-		$scope.model.gameStats.passUsed += 1;
-		if($scope.model.gameStats.passAvailable >= $scope.model.gameStats.passUsed){
+		$scope.model.gameStats.escapes -= 1;
+		if($scope.model.gameStats.escapes > 0){
 			//limipiar input
 			$scope.getWord();
 		}else{

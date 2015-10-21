@@ -1,0 +1,31 @@
+body { color: white !important; font: 24px "Arial Narrow", arial, sans-serif; font-weight: normal; text-shadow: -3px 4px 1px rgba(0, 0, 0, 0.25); }
+body > .container{ padding: 130px 15px 0; background: #1c1714 url('../media/images/bg2.jpg') top center no-repeat; }
+h1, p { padding: 0; margin: 0; font-weight: normal; }
+a { text-decoration: none; color: #f1dfcc; }
+a:visited { text-decoration: none; color: #f1dfcc; }
+a:hover { text-decoration: underline; color: #f1dfcc; }
+
+button.image { display: block; background: none; border: 0; outline: none; -webkit-transform-origin: 25% 50%; -webkit-transform: rotate(-3deg) scale(0.9); -webkit-transition: -webkit-transform 0.2s; }
+button.image:hover { -webkit-transform: rotate(3deg) scale(1.1); }
+
+button.image.share { background: url('../media/images/share_icon.png') center left no-repeat; background-size: contain; }
+
+button.image.play { background: url('../media/images/button_play.png') center left no-repeat; background-size: contain; }
+button.image.challenge { background: url('../media/images/button_challenge.png') center left no-repeat; background-size: contain; }
+button.image.leaderboard { background: url('../media/images/button_leaderboard.png') center left no-repeat; background-size: contain; }
+button.image.close { background: url('../media/images/button_close.png') center left no-repeat; background-size: contain; }
+button.image.brag { background: url('../media/images/button_brag.png') center left no-repeat; background-size: contain; }
+button.image.share_action { background: url('../media/images/button_share_action.png') center left no-repeat; background-size: contain; }
+
+#menu { width: 450px; height: 400px; padding-left: 60px; padding-top: 40px;}
+#menu button.image { width: 400px; height: 100px; display: block; }
+
+.profile.small { width: 48px; height: 48px; top: 5px; left: 5px; border: 1px solid #f1dfcc; }
+
+.gamestats .lives { background: url('../media/images/heart40.png') no-repeat; left: 5px; width: 40px;height: 40px;display: inline-block;}
+.gamestats .bombs { background: url('../media/images/bomb.png'); right: 5px; width: 40px;height: 40px;display: inline-block;}
+#gameover,
+#game {min-height: 400px}
+.dashboard {margin-top: 50px;}
+.gamestats {margin-top: 20px;}
+.instructions {margin-top: 30px;}
