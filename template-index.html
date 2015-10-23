@@ -27,8 +27,15 @@
           <button class="image share"></button>
         </div>
     </nav>
-    <div class="container">
-      
+    <div class="container ft-container">
+      <div class="row text-center" id="gameover" ng-show="model.gameStats.status == 'GAMEOVER'">
+          <div class="col-md-12">
+              <h1>Game Over</h1>
+              <strong>Score: </strong> {{model.gameStats.score}}
+              <br/>
+              << Poner link al menu inicial >>
+          </div>
+      </div>
     </div>
     <footer class="footer">
         <div class="container">

@@ -1,3 +1,4 @@
+/* Commons */
 body { color: white !important; font: 24px "Arial Narrow", arial, sans-serif; font-weight: normal; text-shadow: -3px 4px 1px rgba(0, 0, 0, 0.25); }
 body > .container{ padding: 130px 15px 0; background: #1c1714 url('../media/images/bg2.jpg') top center no-repeat; }
 h1, p { padding: 0; margin: 0; font-weight: normal; }
@@ -17,15 +18,24 @@ button.image.close { background: url('../media/images/button_close.png') center 
 button.image.brag { background: url('../media/images/button_brag.png') center left no-repeat; background-size: contain; }
 button.image.share_action { background: url('../media/images/button_share_action.png') center left no-repeat; background-size: contain; }
 
+.ft-container {min-height: 690px;}
+.profile.small { width: 48px; height: 48px; top: 5px; left: 5px; border: 1px solid #f1dfcc; }
+
+/*Home page */
 #menu { width: 450px; height: 400px; padding-left: 60px; padding-top: 40px;}
 #menu button.image { width: 400px; height: 100px; display: block; }
 
-.profile.small { width: 48px; height: 48px; top: 5px; left: 5px; border: 1px solid #f1dfcc; }
+/* Leaderboard Page */
+.ft-leaderboard-table {padding-top: 30px;}
 
-.gamestats .lives { background: url('../media/images/heart40.png') no-repeat; left: 5px; width: 40px;height: 40px;display: inline-block;}
-.gamestats .bombs { background: url('../media/images/bomb.png'); right: 5px; width: 40px;height: 40px;display: inline-block;}
-#gameover,
-#game {min-height: 400px}
-.dashboard {margin-top: 50px;}
-.gamestats {margin-top: 20px;}
-.instructions {margin-top: 30px;}
+/* Game page */
+.ft-time {margin-top: 20px;}
+.ft-gamestats {min-height: 110px;}
+.ft-gamestats .row {min-height: 50px;}
+.ft-gamestats .lives { background: url('../media/images/heart40.png') no-repeat; left: 5px; width: 40px;height: 40px;display: inline-block;}
+.ft-gamestats .bombs { background: url('../media/images/bomb.png'); right: 5px; width: 40px;height: 40px;display: inline-block;}
+.ft-gamestats .ft-label {line-height: 45px; text-align: right; padding-right: 0px;}
+.ft-instructions {margin-top: 30px;}
+.ft-instructions img {width: 40px; height: 40px;}
+.ft-dashboard {margin-top: 50px;}
+

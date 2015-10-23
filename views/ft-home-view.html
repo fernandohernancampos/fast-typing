@@ -1,49 +1,23 @@
 <div class="row">
-    <div class="col-md-6">
-      <div class="row">
-        <div class="col-md-4 text-right">
-          <img class="profile" src="media/images/profile.png" />
-        </div>
-        <div class="col-md-8">
-            <div class="row">
-              <h1>Fernando Campos</h1>
-            </div>
-            <div class="row">
-                  <img src="media/images/scores64.png" alt="Coins" width="40" /> 
-                  <span class="me coins">...</span>
-            </div>
-        </div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-6 text-right">
+        <img class="profile" src="media/images/profile.png" />
       </div>
-      <div class="row" id="menu">
-        <button class="image play" ng-click="goToTimeTrialGame()"></button>
-        <button class="image leaderboard"></button> 
+      <div class="col-md-8">
+          <div class="row">
+            <h1>Fernando Campos</h1>
+          </div>
+          <div class="row">
+                <img src="media/images/scores64.png" alt="Coins" width="40" /> 
+                <span class="me coins">...</span>
+          </div>
       </div>
     </div>
-    <div class="col-md-6 friends">
-      <div class="row text-center">
-        <h1>Leaderboard</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row" ng-repeat="friend in friends | orderBy: 'score'">
-            <div class="col-md-1">
-              1
-            </div>
-            <div class="col-md-2">
-              <span>
-                <img src="media/images/profile.png" class="profile small" />
-              </span>
-            </div>
-            <div class="col-md-8">
-              <div class="row">
-                {{friend.name}}
-              </div>
-              <div class="row">
-                <strong>Score: </strong> {{friend.score}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>  
+    <div class="row" id="menu">
+      <button class="image play" ng-click="goToTimeTrialGame()"></button>
+      <button class="image leaderboard"></button> 
+    </div>
   </div>
+</div>
+
