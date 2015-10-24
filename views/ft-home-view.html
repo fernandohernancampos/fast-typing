@@ -1,23 +1,22 @@
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-sm-12">
     <div class="row">
-      <div class="col-md-6 text-right">
+      <div class="col-sm-3 text-right">
         <img class="profile" src="media/images/profile.png" />
       </div>
-      <div class="col-md-8">
+      <div class="col-sm-9">
           <div class="row">
-            <h1>Fernando Campos</h1>
+            <h1>{{user.name}}</h1>
           </div>
           <div class="row">
                 <img src="media/images/scores64.png" alt="Coins" width="40" /> 
-                <span class="me coins">...</span>
+                <span class="me coins">{{user.bestScore}}</span>
           </div>
       </div>
     </div>
     <div class="row" id="menu">
       <button class="image play" ng-click="goToTimeTrialGame()"></button>
-      <button class="image leaderboard"></button> 
+      <button class="image leaderboard" ng-click="goToLeaderboardPage()"></button> 
     </div>
   </div>
 </div>
-

@@ -26,9 +26,11 @@ button.image.share_action { background: url('../media/images/button_share_action
 #menu button.image { width: 400px; height: 100px; display: block; }
 
 /* Leaderboard Page */
-.ft-leaderboard-table {padding-top: 30px;}
+.ft-leaderboard-table {padding-top: 30px; margin-left: 35% !important; max-height: 430px; overflow: scroll;}
+.ft-leaderboard-item {margin-bottom: 8px;}
 
 /* Game page */
+#game input {color: black;}
 .ft-time {margin-top: 20px;}
 .ft-gamestats {min-height: 110px;}
 .ft-gamestats .row {min-height: 50px;}
@@ -38,4 +40,3 @@ button.image.share_action { background: url('../media/images/button_share_action
 .ft-instructions {margin-top: 30px;}
 .ft-instructions img {width: 40px; height: 40px;}
 .ft-dashboard {margin-top: 50px;}
-

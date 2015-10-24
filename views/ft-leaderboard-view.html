@@ -3,23 +3,23 @@
     <div class="row text-center ft-leaderboard-title">
       <h1>Leaderboard</h1>
     </div>
-    <div class="row ft-leaderboard-table">
-      <div class="col-sm-12">
-        <div class="row" ng-repeat="friend in friends | orderBy: 'score'">
-          <div class="col-sm-1">
-            1
-          </div>
+    <div class="row">
+      <div class="col-sm-6 ft-leaderboard-table">
+        <div class="row ft-leaderboard-item" ng-repeat="friend in leaders | orderBy: 'bestScore' :desc">
           <div class="col-sm-2">
+            {{$index + 1 }}
+          </div>
+          <div class="col-sm-4">
             <span>
-              <img src="media/images/profile.png" class="profile small" />
+              <img src="{{ friend.picture }}" class="profile small" />
             </span>
           </div>
-          <div class="col-sm-8">
+          <div class="col-sm-6">
             <div class="row">
               {{friend.name}}
             </div>
             <div class="row">
-              <strong>Score: </strong> {{friend.score}}
+              <strong>Score: </strong> {{friend.bestScore}}
             </div>
           </div>
         </div>

@@ -7,13 +7,25 @@ var fastTypingControllers = angular.module('fastTypingControllers', []);
 fastTypingControllers.controller('FastTypingHomeController', [
 	'$scope', 
 	'$location',
-  function($scope, $location) {
-    $scope.username = "Fernando Campos";
+	'userData',
+  function($scope, $location, userData) {
+    $scope.user = userData;
 
     $scope.goToTimeTrialGame = function(){
     	$location.path("/game-time-trial");
     };
+
+    $scope.goToLeaderboardPage = function() {
+    	$location.path("/leaderboard");
+    }
   }]);
+
+fastTypingControllers.controller('FastTypingLeaderboardController', [
+	'$scope',
+	'leaders',
+	function($scope, leaders){
+		$scope.leaders = leaders;
+	}]);
 
 fastTypingControllers.controller('FastTypingGameTimeTrialController', [
 	'$scope',

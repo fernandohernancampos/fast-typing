@@ -3,8 +3,9 @@
 /* App Module */
 
 var fastTypingApp = angular.module('fastTypingApp', [
-  'ngRoute','fastTypingControllers'
-  //'fastTypingServices'
+  'ngRoute',
+  'fastTypingControllers',
+  'fastTypingServices'
 ]);
 
 
@@ -18,13 +19,27 @@ fastTypingApp.config(['$routeProvider',
     $routeProvider.
       when('/', {
         templateUrl: 'views/ft-home-view.html',
-        controller: 'FastTypingHomeController'
+        controller: 'FastTypingHomeController',
+        resolve: {
+          userData : function(FacebookService){
+            return FacebookService.getUserData();
+          }
+        }
+      }).
+      when('/leaderboard',{
+        templateUrl: 'views/ft-leaderboard-view.html',
+        controller: 'FastTypingLeaderboardController',
+        resolve : {
+          leaders: function(ParseService){
+            return ParseService.getLeaders();
+          }
+        }
       }).
       when('/game-time-trial', {
         templateUrl: 'views/ft-game-time-trial-view.html',
         controller: 'FastTypingGameTimeTrialController',
         resolve: {
-            gameModel: function(){
+            gameModel: function(FacebookService){
                 return {
                   gameStats:{
                       gameTime: 2000,
@@ -36,6 +51,7 @@ fastTypingApp.config(['$routeProvider',
                   },
                   words: ["cacatua","elefante","prueba","banana", "billetera", "lapicera", "televisor"],
                   time: 20000,
+                  user: FacebookService.getUserData()
                 }
             }
           }

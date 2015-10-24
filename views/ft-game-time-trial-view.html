@@ -19,8 +19,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 pull-right">
-        <p>Best Score {{user.bestScore}}</p>
+      <div class="col-sm-4 pull-right">
+        <p>Best Score: {{model.user.bestScore}}</p>
       </div>
     </div>
     <div class="row ft-time">
@@ -66,4 +66,12 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
+<div class="row text-center" id="gameover" ng-show="model.gameStats.status == 'GAMEOVER'">
+    <div class="col-md-12">
+        <h1>Game Over</h1>
+        <strong>Score: </strong> {{model.gameStats.score}}
+        <br/>
+        << Poner link al menu inicial >>
+    </div>
+</div>
